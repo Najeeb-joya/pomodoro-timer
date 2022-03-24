@@ -1,0 +1,49 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: crimson;
+    color: white;
+}
+.container{
+    width: 60%;
+    height: 700px;
+    border: 1px black solid;
+    margin: 0 auto;
+}
+
+.brand{
+    display: inline-block;
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+.main-nav{
+    display: inline-block;
+    text-align: right;
+    width: 60%;
+}
+.items{
+    display: block;
+    padding-right: 0;
+}
+.item{
+    list-style: none;
+    display: inline-block;
+    padding-right: 20px;
+}
+ul a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+
+}
+hr{
+    margin-top: 0;
+    width: 100%;
+    border-color:lightgray;
+
+}
