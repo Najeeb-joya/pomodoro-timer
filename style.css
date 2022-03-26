@@ -53,3 +53,31 @@ hr{
     border-color:lightgray;
 
 }
+div.timer{
+    margin:40px auto;
+    border: 1px blue solid;
+    text-align: center;
+}
+div.timer p{
+    display: inline-block;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: gray;
+    border-radius: 8px;
+    font-weight: bold;
+}
+.timer-show{
+    font-size: 80px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+
+}
+button{
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 8px;
+    border: none;
+    padding: 20px 50px;
+}
