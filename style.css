@@ -8,9 +8,7 @@ body{
     color: white;
 }
 .container{
-    width: 60%;
-    height: 700px;
-    border: 1px black solid;
+    width: 40%;
     margin: 0 auto;
 }
 
@@ -55,17 +53,22 @@ hr{
 }
 div.timer{
     margin:40px auto;
-    border: 1px blue solid;
+    /* border: 1px blue solid; */
     text-align: center;
 }
 div.timer p{
     display: inline-block;
     padding: 10px;
     font-size: 20px;
-    cursor: pointer;
     background-color: gray;
-    border-radius: 8px;
+    cursor: pointer;
+    border-radius: 6px;
     font-weight: bold;
+}
+div.timer p:hover{
+    background-color: lightslategray;
+    padding: 10px;
+
 }
 .timer-show{
     font-size: 80px;
@@ -75,9 +78,32 @@ div.timer p{
 }
 button{
     margin-bottom: 20px;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bolder;
     border-radius: 8px;
     border: none;
-    padding: 20px 50px;
+    padding: 20px 60px;
 }
+
+div.addtask-container{
+    margin-top: 30px;
+    border: 3px wheat dotted;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+img{
+    border-radius: 20px;
+    width: 20px;
+    height: 20px;
+
+}
+.addtask{
+    font-size: 20px;
+    font-weight: bolder;
+    margin-left: 5px;
+    
+}
+
