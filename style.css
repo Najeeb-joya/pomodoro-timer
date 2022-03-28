@@ -4,18 +4,19 @@
 body{
     padding: 0;
     margin: 0;
-    background-color: crimson;
+    background-color: rgb(178, 116, 250);
     color: white;
 }
 .container{
-    width: 40%;
+    width: 50%;
     margin: 0 auto;
 }
 
 
 .nav-main-sec{
     background-color: lightblue;
-    margin-top: 30px;
+    margin: 30px auto;
+    width: 60%;
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -51,6 +52,7 @@ hr{
     border-color:lightgray;
 
 }
+
 div.timer{
     margin:40px auto;
     /* border: 1px blue solid; */
@@ -60,7 +62,7 @@ div.timer p{
     display: inline-block;
     padding: 10px;
     font-size: 20px;
-    background-color: gray;
+    background-color: rgb(59, 56, 56);
     cursor: pointer;
     border-radius: 6px;
     font-weight: bold;
