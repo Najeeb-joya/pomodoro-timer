@@ -14,7 +14,7 @@ body{
 
 
 .nav-main-sec{
-    background-color: lightblue;
+    background-color: rgb(233, 78, 99);
     margin: 30px auto;
     width: 60%;
     display: flex;
@@ -49,7 +49,7 @@ ul a{
 hr{
     margin-top: 0;
     width: 100%;
-    border-color:lightgray;
+    border-color:rgb(255, 255, 255);
 
 }
 
@@ -87,6 +87,20 @@ button{
     padding: 20px 60px;
 }
 
+.tasks{
+    text-align: center;
+    
+}
+.task{
+    margin-top: 20px;
+    border: 3px wheat solid;
+    border-radius: 8px;
+    background-color: wheat;
+    color: black;
+    font-size: 20px;
+    padding: 20px;
+}
+
 div.addtask-container{
     margin-top: 30px;
     border: 3px wheat dotted;
@@ -102,6 +116,7 @@ img{
     height: 20px;
 
 }
+
 .addtask{
     font-size: 20px;
     font-weight: bolder;
