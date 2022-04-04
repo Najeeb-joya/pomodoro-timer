@@ -8,15 +8,17 @@ body{
     color: white;
 }
 .container{
-    width: 50%;
+    width: 30%;
     margin: 0 auto;
+    
 }
 
 
 .nav-main-sec{
-    background-color: rgb(233, 78, 99);
+    background-color: rgb(250, 150, 163);
     margin: 30px auto;
     width: 60%;
+    
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -87,7 +89,7 @@ button{
     padding: 20px 60px;
 }
 
-.tasks{
+.tasks-preview{
     text-align: center;
     
 }
@@ -100,6 +102,7 @@ button{
     font-size: 20px;
     padding: 20px;
 }
+
 
 div.addtask-container{
     margin-top: 30px;
@@ -121,6 +124,38 @@ img{
     font-size: 20px;
     font-weight: bolder;
     margin-left: 5px;
+
     
 }
+
+.task-inputs{
+    height: 250px;
+    margin-top: -90px;
+   padding-left: 30px;
+   padding-top: 30px;
+   text-align: center;
+    background-color: white;
+    color: black;
+    display: none;
+}
+.task-input{
+    padding: 20px;
+    width: 80%;
+    font-size: 18px;
+    outline: none;
+    border-radius: 10px;
+}
+
+.task-inputs p{
+  display: inline-block;
+  font-size: 30px;
+  margin-right: 40px;
+
+}
+.task-inputs button{
+    width: 20px;
+    border-radius: 90px;
+    
+}
+
 
