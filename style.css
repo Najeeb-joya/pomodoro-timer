@@ -80,7 +80,7 @@ div.timer p:hover{
     margin-bottom: 40px;
 
 }
-button{
+.start-btn{
     margin-bottom: 20px;
     font-size: 25px;
     font-weight: bolder;
@@ -129,33 +129,53 @@ img{
 }
 
 .task-inputs{
-    height: 250px;
+    height: 300px;
     margin-top: -90px;
-   padding-left: 30px;
    padding-top: 30px;
-   text-align: center;
     background-color: white;
+    border-radius: 8px;
     color: black;
+
     display: none;
 }
 .task-input{
     padding: 20px;
-    width: 80%;
+    margin-left: 30px;
+    width: 90%;
     font-size: 18px;
     outline: none;
     border-radius: 10px;
 }
-
+.task-inputs h2{
+    margin-left: 30px;
+}
 .task-inputs p{
   display: inline-block;
+  margin-left: 30px;
   font-size: 30px;
   margin-right: 40px;
 
 }
-.task-inputs button{
-    width: 20px;
-    border-radius: 90px;
-    
+.inc-dec-btn{
+    padding: 10px;
+    margin-left: 10px;
+    width: 50px
 }
+.save-cancel{
+    background-color: rgb(106, 117, 128);
+    height: 60px;
+    padding-right: 10px;
+    text-align: right;
+}
+.save-cancel button{
+    margin-top: 20px;
+    padding: 5px;
+    margin-right: 10px;
+    width: 60px;
+}
+
+
+
+
 
 
