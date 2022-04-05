@@ -4,7 +4,7 @@
 body{
     padding: 0;
     margin: 0;
-    background-color: rgb(178, 116, 250);
+    background-color: rgb(110, 89, 134);
     color: white;
 }
 .container{
@@ -69,11 +69,7 @@ div.timer p{
     border-radius: 6px;
     font-weight: bold;
 }
-div.timer p:hover{
-    background-color: lightslategray;
-    padding: 10px;
 
-}
 .timer-show{
     font-size: 80px;
     margin-top: 10px;
