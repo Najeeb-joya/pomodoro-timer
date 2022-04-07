@@ -3,12 +3,12 @@ let start_btn = document.querySelector('.start-btn');
 let pomodoro = document.querySelector('.pomodoro');
 let shortbreak = document.querySelector('.shortbreak');
 let longbreak = document.querySelector('.longbreak');
-let shortbreak_minute=05;
-let shortbreak_second=59; 
+let shortbreak_minute;
+let shortbreak_second; 
 
 
 pomodoro.addEventListener('click', e => {
-    timer_show.innerHTML="25:00";
+    timer_show.textContent="25:00";
     pomodoro.style.backgroundColor = "lightslategray";
     shortbreak.style.backgroundColor = "rgb(59, 56, 56)";
     longbreak.style.backgroundColor = "rgb(59, 56, 56)";
@@ -33,7 +33,11 @@ longbreak.addEventListener('click',e => {
 
 start_btn.addEventListener('click', e => {
 
+        console.log(e);
     if(timer_show.textContent == "05:00"){
+        start_btn.textContent ="Stop";
+        shortbreak_minute=4;
+        shortbreak_second=59;
         const intr = setInterval(() => {
             if(shortbreak_minute === 0 && shortbreak_second === 1){
                 clearInterval(intr);
@@ -41,13 +45,16 @@ start_btn.addEventListener('click', e => {
                 shortbreak_second--;
                 if(shortbreak_second === 0){
                     shortbreak_minute--; 
-                    shortbreak_second=59;
-                   
+                    shortbreak_second=59;    
                 }
-                timer_show.textContent = "0"+shortbreak_minute + ":" +shortbreak_second; 
-            }
+                if(shortbreak_second < 10){
+                    timer_show.textContent = "0"+shortbreak_minute + ":" +"0"+shortbreak_second;
 
-                console.log(shortbreak_minute, shortbreak_second);
+                }else{
+                    timer_show.textContent = "0"+shortbreak_minute + ":" +shortbreak_second;
+                }
+                
+            }
         }, 1000);
 
     }else{
