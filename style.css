@@ -85,6 +85,15 @@ div.timer p{
     padding: 20px 60px;
 }
 
+.stop-btn{
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: bolder;
+    border-radius: 8px;
+    border: none;
+    padding: 20px 60px;
+}
+
 .tasks-preview{
     text-align: center;
     
