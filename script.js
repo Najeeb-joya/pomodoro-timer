@@ -1,5 +1,6 @@
 let timer_show = document.querySelector('.timer-show');
 let start_btn = document.querySelector('.start-btn');
+let stop_btn = document.querySelector('.stop-btn');
 let pomodoro = document.querySelector('.pomodoro');
 let shortbreak = document.querySelector('.shortbreak');
 let longbreak = document.querySelector('.longbreak');
@@ -8,22 +9,17 @@ let second;
 var intr; 
 
 
-
-
-
 start_btn.addEventListener('click', e => {
-    if(timer_show.textContent == "05:00"){
-        minute=4;
-        second=59;
-        console.log("shortbreak");
-    } if(timer_show.textContent == "25:00"){
+    stop_btn.style.display="inline";
+    if(timer_show.textContent === "25:00"){
         minute=24;
         second=59;
-
-
     }if(timer_show.textContent === "15:00"){
         minute= 14; 
         second =59;
+    } if(timer_show.textContent === "05:00"){
+        minute=4;
+        second=59;
     }
 
     intr = setInterval(() => {
@@ -34,16 +30,19 @@ start_btn.addEventListener('click', e => {
             if(second === 0){
                 minute--; 
                 second=59;    
-            }
-            if(second < 10 || minute < 10){
-                timer_show.textContent = "0"+minute + ":" +"0"+second;
+            }if( second < 10 || minute <10){
+                timer_show.textContent = "0" + minute + ":" + "0" + second;
 
-            }else{
-                timer_show.textContent = +minute + ":" +second;
+            }
+            else{
+                timer_show.textContent = minute + ":" + second;
             }
             
         }
     }, 1000);
+});
+stop_btn.addEventListener('click', e =>{
+    clearInterval(intr);
 });
 
 
