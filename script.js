@@ -3,41 +3,48 @@ let start_btn = document.querySelector('.start-btn');
 let pomodoro = document.querySelector('.pomodoro');
 let shortbreak = document.querySelector('.shortbreak');
 let longbreak = document.querySelector('.longbreak');
-let shortbreak_minute;
-let shortbreak_second;
+let minute;
+let second;
 var intr; 
+
+
 
 
 
 start_btn.addEventListener('click', e => {
     if(timer_show.textContent == "05:00"){
-        start_btn.textContent ="Stop";
-        shortbreak_minute=4;
-        shortbreak_second=59;
-         intr = setInterval(() => {
-            if(shortbreak_minute === 0 && shortbreak_second === 1){
-                clearInterval(intr);
-            }else{
-                shortbreak_second--;
-                if(shortbreak_second === 0){
-                    shortbreak_minute--; 
-                    shortbreak_second=59;    
-                }
-                if(shortbreak_second < 10){
-                    timer_show.textContent = "0"+shortbreak_minute + ":" +"0"+shortbreak_second;
+        minute=4;
+        second=59;
+        console.log("shortbreak");
+    } if(timer_show.textContent == "25:00"){
+        minute=24;
+        second=59;
 
-                }else{
-                    timer_show.textContent = "0"+shortbreak_minute + ":" +shortbreak_second;
-                }
-                
-            }
-        }, 1000);
 
-    }else{
-        console.log("LongBreak or Pomodoro");
+    }if(timer_show.textContent === "15:00"){
+        minute= 14; 
+        second =59;
     }
-});
 
+    intr = setInterval(() => {
+        if(minute === 0 && second === 1){
+            clearInterval(intr);
+        }else{
+            second--;
+            if(second === 0){
+                minute--; 
+                second=59;    
+            }
+            if(second < 10 || minute < 10){
+                timer_show.textContent = "0"+minute + ":" +"0"+second;
+
+            }else{
+                timer_show.textContent = +minute + ":" +second;
+            }
+            
+        }
+    }, 1000);
+});
 
 
 pomodoro.addEventListener('click', e => {
@@ -54,6 +61,7 @@ shortbreak.addEventListener('click', e => {
     shortbreak.style.backgroundColor = "lightslategray";
     pomodoro.style.backgroundColor = "rgb(59, 56, 56)";
     longbreak.style.backgroundColor = "rgb(59, 56, 56)";
+    clearInterval(intr)
 
 });
 longbreak.addEventListener('click',e => {
@@ -64,6 +72,9 @@ longbreak.addEventListener('click',e => {
     pomodoro.style.backgroundColor = "rgb(59, 56, 56)";
     clearInterval(intr);
 });
+
+
+
 
 
 
