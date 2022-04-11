@@ -1,5 +1,6 @@
 let timer_show = document.querySelector('.timer-show');
 let start_btn = document.querySelector('.start-btn');
+let pause_btn = document.querySelector('.pause-btn');
 let stop_btn = document.querySelector('.stop-btn');
 let pomodoro = document.querySelector('.pomodoro');
 let shortbreak = document.querySelector('.shortbreak');
@@ -10,7 +11,9 @@ var intr;
 
 
 start_btn.addEventListener('click', e => {
+    pause_btn.style.display="inline";
     stop_btn.style.display="inline";
+    
     if(timer_show.textContent === "25:00"){
         minute=24;
         second=59;
@@ -41,8 +44,11 @@ start_btn.addEventListener('click', e => {
         }
     }, 1000);
 });
-stop_btn.addEventListener('click', e =>{
+pause_btn.addEventListener('click', e => {
     clearInterval(intr);
+});
+stop_btn.addEventListener('click', e =>{
+    location.reload();
 });
 
 
