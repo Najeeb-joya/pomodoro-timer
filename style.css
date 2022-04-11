@@ -83,7 +83,7 @@ div.timer p{
     font-weight: bolder;
     border-radius: 8px;
     border: none;
-    padding: 20px 60px;
+    padding: 20px 30px;
     cursor: pointer;
 }
 
@@ -93,8 +93,10 @@ div.timer p{
     font-weight: bolder;
     border-radius: 8px;
     border: none;
-    padding: 20px 60px;
+    padding: 20px 30px;
+    display: none;
 }
+
 
 .tasks-preview{
     text-align: center;
