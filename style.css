@@ -83,6 +83,7 @@ div.timer p{
     border-radius: 8px;
     border: none;
     padding: 20px 60px;
+    cursor: pointer;
 }
 
 .stop-btn{
