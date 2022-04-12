@@ -14,6 +14,8 @@ var flag;
 start_btn.addEventListener('click', e => {
     pause_btn.style.display="inline";
     stop_btn.style.display="inline";
+    start_btn.disabled=true;
+    pause_btn.disabled=false;
     
     if(timer_show.textContent === "25:00"){
         minute=24;
@@ -77,6 +79,8 @@ start_btn.addEventListener('click', e => {
 });
 pause_btn.addEventListener('click', e => {
     clearInterval(intr);
+    pause_btn.disabled=true;
+    start_btn.disabled = false;
 });
 stop_btn.addEventListener('click', e =>{
     location.reload();
