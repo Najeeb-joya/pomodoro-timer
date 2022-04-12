@@ -71,11 +71,12 @@ start_btn.addEventListener('click', e => {
                 if(second < 10){
                     timer_show.textContent = "0" + minute + ":" + "0" + second;
                 }
-
             }else{
                 timer_show.textContent = minute + ":" + second;
+                if(second <10){
+                    timer_show.textContent = minute + ":" + "0" + second;
+                }
             }
-            
         }
     }, 1000);
 });
