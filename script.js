@@ -66,11 +66,13 @@ start_btn.addEventListener('click', e => {
             if(second === 0){
                 minute--; 
                 second=59;    
-            }if( second < 10 || minute <10){
-                timer_show.textContent = "0" + minute + ":" + "0" + second;
+            }if(minute <10){
+                timer_show.textContent = "0" + minute + ":" + second;
+                if(second < 10){
+                    timer_show.textContent = "0" + minute + ":" + "0" + second;
+                }
 
-            }
-            else{
+            }else{
                 timer_show.textContent = minute + ":" + second;
             }
             
