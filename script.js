@@ -59,6 +59,7 @@ pomodoro.addEventListener('click', e => {
     longbreak.style.backgroundColor = "rgb(59, 56, 56)";
     clearInterval(intr);
     stop_btn.style.display="none";
+    pause_btn.style.display="none";
     
 
 });
@@ -69,6 +70,7 @@ shortbreak.addEventListener('click', e => {
     longbreak.style.backgroundColor = "rgb(59, 56, 56)";
     clearInterval(intr)
     stop_btn.style.display="none";
+    pause_btn.style.display="none";
 
 });
 longbreak.addEventListener('click',e => {
@@ -78,7 +80,8 @@ longbreak.addEventListener('click',e => {
     shortbreak.style.backgroundColor = "rgb(59, 56, 56)";
     pomodoro.style.backgroundColor = "rgb(59, 56, 56)";
     clearInterval(intr);
-    stop_btn.style.display="none"
+    stop_btn.style.display="none";
+    pause_btn.style.display="none";
 });
 
 
