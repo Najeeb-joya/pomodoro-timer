@@ -104,19 +104,27 @@ stop_btn.addEventListener('click', e =>{
     if(confirm === true){
        //location.reload();
        clearInterval(intr);
-       timer_show.innerHTML = "05:00";
-       shortbreak.style.backgroundColor = "lightslategray";
-       pomodoro.style.backgroundColor = "rgb(59, 56, 56)";
-       longbreak.style.backgroundColor = "rgb(59, 56, 56)";
+    if(flag === "pomodoro"){
+        shrtbreak();  
        stop_btn.style.display="none";
        pause_btn.style.display="none";
        start_btn.disabled= false;
-
-
-    }else{
-        console.log("nothing");
     }
-    
+     if(flag === "shortbreak"){
+        pmodoro();
+        stop_btn.style.display="none";
+        pause_btn.style.display="none";
+        start_btn.disabled= false;
+    }
+    if(flag === "longbreak"){
+        pmodoro();
+        stop_btn.style.display="none";
+        pause_btn.style.display="none";
+        start_btn.disabled= false;
+
+    }
+}
+
 });
 
 
