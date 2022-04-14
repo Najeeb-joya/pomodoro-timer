@@ -57,19 +57,19 @@ start_btn.addEventListener('click', e => {
             clearInterval(intr);
 
             if(flag =="pomodoro"){
-                shrtbreak();
+                shrtbreak(); // call the shrtbreak() function to move to the shortbreak Tab
                 stop_btn.style.display="none";
                  pause_btn.style.display="none";
                  start_btn.disabled=false;
             }
             if(flag === "shortbreak"){ 
-                lngbreak();
+                lngbreak(); // call the lngbreak() function to move to the longbreak Tab
                 stop_btn.style.display="none";
                 pause_btn.style.display="none";
                 start_btn.disabled=false;
             }
             if(flag === "longbreak"){
-                pmodoro();
+                pmodoro(); // call the pmodoro() function to move to the pomodoro Tab
                 stop_btn.style.display="none";
                 pause_btn.style.display="none";
                 start_btn.disabled=false;
@@ -121,7 +121,7 @@ stop_btn.addEventListener('click', e =>{
 
 
 pomodoro.addEventListener('click', e => {
-    pmodoro();
+    pmodoro(); // call pmodoro() function to add style for Pomodoro tab. 
     clearInterval(intr);
     stop_btn.style.display="none";
     pause_btn.style.display="none";
@@ -129,14 +129,14 @@ pomodoro.addEventListener('click', e => {
 
 });
 shortbreak.addEventListener('click', e => {
-    shrtbreak();
+    shrtbreak(); // call shrtbreak() function to add style for ShortBreak tab. 
     clearInterval(intr)
     stop_btn.style.display="none";
     pause_btn.style.display="none";
 
 });
 longbreak.addEventListener('click',e => {
-    lngbreak();
+    lngbreak(); // call lngbreak() function to add style for LongBreak tab. 
     clearInterval(intr);
     stop_btn.style.display="none";
     pause_btn.style.display="none";
