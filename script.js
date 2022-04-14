@@ -11,6 +11,33 @@ var intr;
 var flag;
 
 
+function shrtbreak(){
+    timer_show.innerHTML = "05:00";
+    shortbreak.style.backgroundColor = "lightslategray";
+    pomodoro.style.backgroundColor = "rgb(59, 56, 56)";
+    longbreak.style.backgroundColor = "rgb(59, 56, 56)";
+
+}
+
+function pmodoro(){
+    timer_show.textContent="25:00";
+    pomodoro.style.backgroundColor = "lightslategray";
+    shortbreak.style.backgroundColor = "rgb(59, 56, 56)";
+    longbreak.style.backgroundColor = "rgb(59, 56, 56)";
+
+}
+
+function lngbreak(){
+    timer_show.innerHTML="15:00";
+    longbreak.style.backgroundColor = "lightslategray";
+    shortbreak.style.backgroundColor = "rgb(59, 56, 56)";
+    pomodoro.style.backgroundColor = "rgb(59, 56, 56)";
+
+}
+
+
+
+
 start_btn.addEventListener('click', e => {
     pause_btn.style.display="inline";
     stop_btn.style.display="inline";
@@ -88,7 +115,17 @@ pause_btn.addEventListener('click', e => {
 stop_btn.addEventListener('click', e =>{
     var confirm = window.confirm("Are you sure to end this round early");
     if(confirm === true){
-        location.reload();
+       //location.reload();
+       clearInterval(intr);
+       timer_show.innerHTML = "05:00";
+       shortbreak.style.backgroundColor = "lightslategray";
+       pomodoro.style.backgroundColor = "rgb(59, 56, 56)";
+       longbreak.style.backgroundColor = "rgb(59, 56, 56)";
+       stop_btn.style.display="none";
+       pause_btn.style.display="none";
+       start_btn.disabled= false;
+
+
     }else{
         console.log("nothing");
     }
@@ -97,10 +134,7 @@ stop_btn.addEventListener('click', e =>{
 
 
 pomodoro.addEventListener('click', e => {
-    timer_show.textContent="25:00";
-    pomodoro.style.backgroundColor = "lightslategray";
-    shortbreak.style.backgroundColor = "rgb(59, 56, 56)";
-    longbreak.style.backgroundColor = "rgb(59, 56, 56)";
+    pmodoro();
     clearInterval(intr);
     stop_btn.style.display="none";
     pause_btn.style.display="none";
@@ -108,21 +142,14 @@ pomodoro.addEventListener('click', e => {
 
 });
 shortbreak.addEventListener('click', e => {
-    timer_show.innerHTML = "05:00";
-    shortbreak.style.backgroundColor = "lightslategray";
-    pomodoro.style.backgroundColor = "rgb(59, 56, 56)";
-    longbreak.style.backgroundColor = "rgb(59, 56, 56)";
+    shrtbreak();
     clearInterval(intr)
     stop_btn.style.display="none";
     pause_btn.style.display="none";
 
 });
 longbreak.addEventListener('click',e => {
-   
-    timer_show.innerHTML="15:00";
-    longbreak.style.backgroundColor = "lightslategray";
-    shortbreak.style.backgroundColor = "rgb(59, 56, 56)";
-    pomodoro.style.backgroundColor = "rgb(59, 56, 56)";
+    lngbreak();
     clearInterval(intr);
     stop_btn.style.display="none";
     pause_btn.style.display="none";
