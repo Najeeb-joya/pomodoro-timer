@@ -16,7 +16,6 @@ function shrtbreak(){
     shortbreak.style.backgroundColor = "lightslategray";
     pomodoro.style.backgroundColor = "rgb(59, 56, 56)";
     longbreak.style.backgroundColor = "rgb(59, 56, 56)";
-
 }
 
 function pmodoro(){
@@ -24,7 +23,6 @@ function pmodoro(){
     pomodoro.style.backgroundColor = "lightslategray";
     shortbreak.style.backgroundColor = "rgb(59, 56, 56)";
     longbreak.style.backgroundColor = "rgb(59, 56, 56)";
-
 }
 
 function lngbreak(){
@@ -32,11 +30,7 @@ function lngbreak(){
     longbreak.style.backgroundColor = "lightslategray";
     shortbreak.style.backgroundColor = "rgb(59, 56, 56)";
     pomodoro.style.backgroundColor = "rgb(59, 56, 56)";
-
 }
-
-
-
 
 start_btn.addEventListener('click', e => {
     pause_btn.style.display="inline";
@@ -63,29 +57,22 @@ start_btn.addEventListener('click', e => {
             clearInterval(intr);
 
             if(flag =="pomodoro"){
-                timer_show.innerHTML = "05:00";
-                shortbreak.style.backgroundColor = "lightslategray";
-                pomodoro.style.backgroundColor = "rgb(59, 56, 56)";
-                longbreak.style.backgroundColor = "rgb(59, 56, 56)";
+                shrtbreak();
                 stop_btn.style.display="none";
                  pause_btn.style.display="none";
-
+                 start_btn.disabled=false;
             }
-            if(flag === "shortbreak"){  
-                timer_show.innerHTML="15:00";
-                longbreak.style.backgroundColor = "lightslategray";
-                shortbreak.style.backgroundColor = "rgb(59, 56, 56)";
-                pomodoro.style.backgroundColor = "rgb(59, 56, 56)";
+            if(flag === "shortbreak"){ 
+                lngbreak();
                 stop_btn.style.display="none";
                 pause_btn.style.display="none";
+                start_btn.disabled=false;
             }
             if(flag === "longbreak"){
-                timer_show.textContent="25:00";
-                pomodoro.style.backgroundColor = "lightslategray";
-                shortbreak.style.backgroundColor = "rgb(59, 56, 56)";
-                longbreak.style.backgroundColor = "rgb(59, 56, 56)";
+                pmodoro();
                 stop_btn.style.display="none";
                 pause_btn.style.display="none";
+                start_btn.disabled=false;
             }
 
         }else{
@@ -105,7 +92,7 @@ start_btn.addEventListener('click', e => {
                 }
             }
         }
-    }, 1000);
+    }, 10);
 });
 pause_btn.addEventListener('click', e => {
     clearInterval(intr);
