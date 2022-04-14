@@ -31,6 +31,11 @@ function lngbreak(){
     shortbreak.style.backgroundColor = "rgb(59, 56, 56)";
     pomodoro.style.backgroundColor = "rgb(59, 56, 56)";
 }
+function btn_visiblity(){
+    stop_btn.style.display="none";
+    pause_btn.style.display="none";
+    start_btn.disabled=false;
+}
 
 start_btn.addEventListener('click', e => {
     pause_btn.style.display="inline";
@@ -58,21 +63,15 @@ start_btn.addEventListener('click', e => {
 
             if(flag =="pomodoro"){
                 shrtbreak(); // call the shrtbreak() function to move to the shortbreak Tab
-                stop_btn.style.display="none";
-                 pause_btn.style.display="none";
-                 start_btn.disabled=false;
+                btn_visiblity();
             }
             if(flag === "shortbreak"){ 
                 lngbreak(); // call the lngbreak() function to move to the longbreak Tab
-                stop_btn.style.display="none";
-                pause_btn.style.display="none";
-                start_btn.disabled=false;
+                btn_visiblity();
             }
             if(flag === "longbreak"){
                 pmodoro(); // call the pmodoro() function to move to the pomodoro Tab
-                stop_btn.style.display="none";
-                pause_btn.style.display="none";
-                start_btn.disabled=false;
+                btn_visiblity();
             }
 
         }else{
