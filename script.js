@@ -104,26 +104,18 @@ stop_btn.addEventListener('click', e =>{
        //location.reload();
        clearInterval(intr);
     if(flag === "pomodoro"){
-        shrtbreak();  
-       stop_btn.style.display="none";
-       pause_btn.style.display="none";
-       start_btn.disabled= false;
+        shrtbreak(); 
+        btn_visiblity(); 
     }
      if(flag === "shortbreak"){
         pmodoro();
-        stop_btn.style.display="none";
-        pause_btn.style.display="none";
-        start_btn.disabled= false;
+        btn_visiblity();
     }
     if(flag === "longbreak"){
         pmodoro();
-        stop_btn.style.display="none";
-        pause_btn.style.display="none";
-        start_btn.disabled= false;
-
+        btn_visiblity();
     }
 }
-
 });
 
 
