@@ -86,7 +86,13 @@ pause_btn.addEventListener('click', e => {
     start_btn.disabled = false;
 });
 stop_btn.addEventListener('click', e =>{
-    location.reload();
+    var confirm = window.confirm("Are you sure to end this round early");
+    if(confirm === true){
+        location.reload();
+    }else{
+        console.log("nothing");
+    }
+    
 });
 
 
