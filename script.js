@@ -146,7 +146,12 @@ longbreak.addEventListener('click',e => {
 
 addtask_btn.addEventListener('click', e => {
     console.log("Task added");
-    document.querySelector('.task-inputs').style.display ="block";
+
+    var task_input = document.querySelector('.task-inputs'); 
+    task_input.style.display="block";
+    document.querySelector('.cancel').addEventListener('click', e => {
+        task_input.style.display="none";
+    });
 });
 
 
