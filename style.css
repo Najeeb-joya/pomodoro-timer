@@ -141,14 +141,13 @@ img{
 }
 
 .task-inputs{
-    height: 300px;
-    margin-top: -90px;
+    height: 250px;
+    margin-top: -80px;
    padding-top: 30px;
     background-color: white;
     border-radius: 8px;
     color: black;
-
-    display: block;
+    display:none  ;
 }
 .task-input{
     padding: 10px;
@@ -161,6 +160,8 @@ img{
 .task-inputs h2{
     margin-left: 30px;
     font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: -20px;
 }
 .task-inputs p{
   display: inline-block;
@@ -180,6 +181,7 @@ img{
     height: 60px;
     padding-right: 10px;
     text-align: right;
+    
 }
 .save-cancel button{
     margin-top: 20px;
