@@ -7,6 +7,8 @@ let shortbreak = document.querySelector('.shortbreak');
 let longbreak = document.querySelector('.longbreak');
 let addtask_btn = document.querySelector('.addtask-container');
 var task_preview = document.querySelector('.tasks-preview');
+var save_btn=document.querySelector('.save');
+var cancel_btn= document.querySelector('.cancel');
 let alarm = new Audio('../sounds/alarm01.m4a');
 let minute;
 let second;
@@ -145,21 +147,23 @@ longbreak.addEventListener('click',e => {
     pause_btn.style.display="none";
 });
 
-addtask_btn.addEventListener('click', e => {
+addtask_btn.addEventListener('click', e => { // handle addtask button 
+
     var task_input = document.querySelector('.task-inputs');  // access the task input div
     task_input.style.display="block";
 
-    document.querySelector('.cancel').addEventListener('click', e => { // handle cancel button event which is inside task  input div 
-        task_input.style.display="none"; 
-        task_preview.style.display = "none";
-    });
-
-    document.querySelector('.save').addEventListener('click', e => { // handle save button event which is inside task input div
-        task_preview.style.display = "block";
-        var task = document.querySelector('.task').textContent = document.querySelector('.task-input').value;
+    cancel_btn.addEventListener('click', e => { // handle cancel button event which is inside task  input div 
         task_input.style.display="none"; 
         
+    });
 
+    save_btn.addEventListener('click', e => { // handle save button event which is inside task input div
+        task_preview.style.display = "block";
+        var task = document.createElement('p');
+        task.textContent= document.querySelector('.task-input').value;
+        task.setAttribute('class', 'task');
+        task_preview.append(task);
+         document.querySelector('.task-input').value=""; 
     });
 });
 
