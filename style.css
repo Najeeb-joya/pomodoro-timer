@@ -178,17 +178,20 @@ img{
 }
 .save-cancel{
     background-color: rgb(106, 117, 128);
+    background: black;
     height: 60px;
     padding-right: 10px;
     text-align: right;
     
 }
 .save-cancel button{
+    background: white;
     margin-top: 20px;
     padding: 5px;
     margin-right: 10px;
     width: 60px;
     font-weight: 400;
+    cursor: pointer;
 }
 
 
