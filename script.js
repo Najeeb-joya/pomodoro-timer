@@ -5,6 +5,7 @@ let stop_btn = document.querySelector('.stop-btn');
 let pomodoro = document.querySelector('.pomodoro');
 let shortbreak = document.querySelector('.shortbreak');
 let longbreak = document.querySelector('.longbreak');
+let addtask_btn = document.querySelector('.addtask-container');
 let alarm = new Audio('../sounds/alarm01.m4a');
 let minute;
 let second;
@@ -121,8 +122,6 @@ stop_btn.addEventListener('click', e =>{
     }
 }
 });
-
-
 pomodoro.addEventListener('click', e => {
     pmodoro(); // call pmodoro() function to add style for Pomodoro tab. 
     clearInterval(intr);
@@ -145,7 +144,10 @@ longbreak.addEventListener('click',e => {
     pause_btn.style.display="none";
 });
 
-
+addtask_btn.addEventListener('click', e => {
+    console.log("Task added");
+    document.querySelector('.task-inputs').style.display ="block";
+});
 
 
 
