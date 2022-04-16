@@ -17,7 +17,7 @@ body{
 .nav-main-sec{
     background-color: #f04259;
     margin: 30px auto;
-    width: 60%;
+    width: 100%;
     
     display: flex;
     justify-content:space-between;
@@ -100,6 +100,15 @@ div.timer p{
     margin-left: 10px ;
 }
 
+.task-lable{
+    font-weight: 600;
+    font-size: 20px;
+    
+}
+.sub-menu{
+    display: flex;
+    justify-content: space-between;
+}
 
 .tasks-preview{
     text-align: center;
@@ -193,7 +202,6 @@ img{
     font-weight: 400;
     cursor: pointer;
 }
-
 
 
 
