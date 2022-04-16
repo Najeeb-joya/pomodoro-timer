@@ -5,7 +5,7 @@ let stop_btn = document.querySelector('.stop-btn');
 let pomodoro = document.querySelector('.pomodoro');
 let shortbreak = document.querySelector('.shortbreak');
 let longbreak = document.querySelector('.longbreak');
-let alarm = new Audio('../sounds/alarm.wav');
+let alarm = new Audio('../sounds/alarm01.m4a');
 let minute;
 let second;
 var intr; 
