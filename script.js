@@ -5,6 +5,7 @@ let stop_btn = document.querySelector('.stop-btn');
 let pomodoro = document.querySelector('.pomodoro');
 let shortbreak = document.querySelector('.shortbreak');
 let longbreak = document.querySelector('.longbreak');
+let alarm = new Audio('../sounds/alarm.wav');
 let minute;
 let second;
 var intr; 
@@ -90,6 +91,9 @@ start_btn.addEventListener('click', e => {
                     timer_show.textContent = minute + ":" + "0" + second;
                 }
             }
+        }
+        if(flag === "pomodoro" && minute === 1 && second < 40){ // add alarm sound when timer reach to 1 minute
+            alarm.play();
         }
     }, 10);
 });
