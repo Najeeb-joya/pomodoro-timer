@@ -6,6 +6,7 @@ let pomodoro = document.querySelector('.pomodoro');
 let shortbreak = document.querySelector('.shortbreak');
 let longbreak = document.querySelector('.longbreak');
 let addtask_btn = document.querySelector('.addtask-container');
+var task_preview = document.querySelector('.tasks-preview');
 let alarm = new Audio('../sounds/alarm01.m4a');
 let minute;
 let second;
@@ -145,12 +146,20 @@ longbreak.addEventListener('click',e => {
 });
 
 addtask_btn.addEventListener('click', e => {
-    console.log("Task added");
-
-    var task_input = document.querySelector('.task-inputs'); 
+    var task_input = document.querySelector('.task-inputs');  // access the task input div
     task_input.style.display="block";
-    document.querySelector('.cancel').addEventListener('click', e => {
-        task_input.style.display="none";
+
+    document.querySelector('.cancel').addEventListener('click', e => { // handle cancel button event which is inside task  input div 
+        task_input.style.display="none"; 
+        task_preview.style.display = "none";
+    });
+
+    document.querySelector('.save').addEventListener('click', e => { // handle save button event which is inside task input div
+        task_preview.style.display = "block";
+        var task = document.querySelector('.task').textContent = document.querySelector('.task-input').value;
+        task_input.style.display="none"; 
+        
+
     });
 });
 
