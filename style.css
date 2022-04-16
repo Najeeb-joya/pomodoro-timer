@@ -107,9 +107,9 @@ div.timer p{
 }
 .task{
     margin-top: 20px;
-    border: 3px wheat solid;
+    
     border-radius: 8px;
-    background-color: wheat;
+    background-color: white;
     color: black;
     font-size: 20px;
     padding: 20px;
@@ -118,8 +118,8 @@ div.timer p{
 
 div.addtask-container{
     margin-top: 30px;
-    border: 3px wheat dotted;
-    border-radius: 6px;
+    border: 4px white dotted;
+    border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
