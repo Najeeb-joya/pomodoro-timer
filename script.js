@@ -148,22 +148,29 @@ longbreak.addEventListener('click',e => {
 });
 
 addtask_btn.addEventListener('click', e => { // handle addtask button 
-
-    var task_input = document.querySelector('.task-inputs');  // access the task input div
-    task_input.style.display="block";
+    var task_inputs = document.querySelector('.task-inputs');  // access the task input div
+    var task_input = document.querySelector('.task-input');
+    task_inputs.style.display="block";
 
     cancel_btn.addEventListener('click', e => { // handle cancel button event which is inside task  input div 
-        task_input.style.display="none"; 
+        task_inputs.style.display="none"; 
+        task_input.value="";
         
     });
 
+    save_btn.disabled=true;
+    task_input.addEventListener('keyup', e =>{
+        save_btn.disabled=false;
+    });
     save_btn.addEventListener('click', e => { // handle save button event which is inside task input div
         task_preview.style.display = "block";
-        var task = document.createElement('p');
-        task.textContent= document.querySelector('.task-input').value;
-        task.setAttribute('class', 'task');
-        task_preview.append(task);
-         document.querySelector('.task-input').value=""; 
+        if(task_input.value !== ""){
+            var task = document.createElement('p');
+            task.textContent= task_input.value;
+            task.setAttribute('class', 'task');
+            task_preview.append(task);
+            task_input.value=" ";   
+        }
     });
 });
 
