@@ -111,6 +111,11 @@ div.timer p{
 .sub-menu{
     display: flex;
     justify-content: space-between;
+    
+}
+
+.sub-menu img{
+    cursor: pointer;
 }
 
 .tasks-preview{
