@@ -16,9 +16,10 @@ body{
 
 .nav-main-sec{
     background-color: #f04259;
-    margin: 30px auto;
     width: 100%;
-    
+    position:fixed;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -58,7 +59,7 @@ hr{
 }
 
 div.timer{
-    margin:40px auto;
+    margin:80px auto;
     /* border: 1px blue solid; */
     text-align: center;
     background-color: rgb(122, 105, 142);
