@@ -132,12 +132,12 @@ div.timer p{
 }
 .sub-menu-lists{
     width: 50%;
-    height: 180px;
     background-color: white;
     position: absolute;
     right: 0;
     margin-top: -12px;
     border-radius: 4px;
+    display: none;
    
      
 }
