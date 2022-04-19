@@ -72,6 +72,7 @@ div.timer{
     text-align: center;
     background-color: rgb(122, 105, 142);
     background-color: rgb(37, 35, 38);
+    border-radius: 8px;
 }
 div.timer p{
     display: inline-block;
