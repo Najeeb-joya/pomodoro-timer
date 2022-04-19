@@ -9,6 +9,7 @@ let addtask_btn = document.querySelector('.addtask-container');
 var task_preview = document.querySelector('.tasks-preview');
 var save_btn=document.querySelector('.save');
 var cancel_btn= document.querySelector('.cancel');
+let sub_menu_icon = document.querySelector('.sub-menu-icon');
 let alarm = new Audio('../sounds/alarm01.m4a');
 let minute;
 let second;
@@ -147,6 +148,11 @@ longbreak.addEventListener('click',e => {
     pause_btn.style.display="none";
 });
 
+sub_menu_icon.addEventListener('click', e =>{
+    document.querySelector('.sub-menu-lists').style.display ="block";
+});
+
+
 addtask_btn.addEventListener('click', e => { // handle addtask button 
     var task_inputs = document.querySelector('.task-inputs');  // access the task input div
     var task_input = document.querySelector('.task-input');
@@ -169,7 +175,7 @@ addtask_btn.addEventListener('click', e => { // handle addtask button
             task.textContent= task_input.value;
             task.setAttribute('class', 'task');
             task_preview.append(task);
-            task_input.value=" ";   
+            task_input.value="";   
         }
     });
 });
