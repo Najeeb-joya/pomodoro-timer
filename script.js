@@ -149,7 +149,14 @@ longbreak.addEventListener('click',e => {
 });
 
 sub_menu_icon.addEventListener('click', e =>{
-    document.querySelector('.sub-menu-lists').style.display ="block";
+    var test = document.querySelector('.sub-menu-lists');
+    console.log(test.style.display);
+
+    if(test.style.display === "none" || test.style.display ===""){
+        test.style.display="block";
+    }else{
+        test.style.display ="none";
+    }
 });
 
 
