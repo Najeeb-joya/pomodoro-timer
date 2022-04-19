@@ -52,11 +52,11 @@ ul a{
     font-size: 17px;
 
 }
-hr{
-    margin-top: 0;
+div.time-weather{
+    margin-top:70px;
     width: 100%;
-    border-color:rgb(255, 255, 255);
-
+    background-color: rgb(87, 197, 190);
+    height: 40px
 }
 
 div.timer{
@@ -121,8 +121,8 @@ div.timer p{
 }
 .sub-menu img{
     cursor: pointer;
-    padding: 3px;
-    box-sizing: content-box;
+    padding: 1px;
+    box-sizing: border-box;
     
 }
 
