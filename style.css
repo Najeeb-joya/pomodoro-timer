@@ -10,6 +10,7 @@ body{
 .container{
     width: 30%;
     margin: 0 auto;
+    position: relative;
     
 }
 
@@ -123,6 +124,25 @@ div.timer p{
     display: none;
     
 }
+.sub-menu-lists{
+    width: 50%;
+    height: 200px;
+    background-color: white;
+    position: absolute;
+    right: 0;
+
+   
+     
+}
+.sub-menu-list{
+    padding: 20px;
+    color: black;
+    list-style: none;
+}
+.sub-menu-list li{
+    padding: 10px;
+}
+
 .task{
     margin-top: 20px;
     border-radius: 8px;
