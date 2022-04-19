@@ -121,7 +121,8 @@ div.timer p{
 }
 .sub-menu img{
     cursor: pointer;
-    padding: 5px;
+    padding: 3px;
+    box-sizing: content-box;
     
 }
 
@@ -138,16 +139,26 @@ div.timer p{
     margin-top: -12px;
     border-radius: 4px;
     display: none;
-   
-     
 }
 .sub-menu-list{
-    padding: 20px;
+    margin:0;
     color: black;
     list-style: none;
+    
 }
 .sub-menu-list li{
-    padding: 10px;
+    margin: 5px 0;
+    padding: 5px 0;
+    padding-left: 30px;
+    margin-left: -40px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+.sub-menu-list li:hover{
+    background-color:orange;
+    
 }
 
 .task{
