@@ -112,11 +112,17 @@ div.timer p{
 .sub-menu{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 10px;
+
     
 }
-
+.sub-menu div{
+    background-color: white;
+}
 .sub-menu img{
     cursor: pointer;
+    padding: 5px;
+    
 }
 
 .tasks-preview{
@@ -130,8 +136,7 @@ div.timer p{
     background-color: white;
     position: absolute;
     right: 0;
-
-   
+    display: none;
      
 }
 .sub-menu-list{
