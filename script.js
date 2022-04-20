@@ -10,6 +10,7 @@ var task_preview = document.querySelector('.tasks-preview');
 var save_btn=document.querySelector('.save');
 var cancel_btn= document.querySelector('.cancel');
 let sub_menu_icon = document.querySelector('.sub-menu-icon');
+var sub_menu_list = document.querySelector('.sub-menu-lists');
 let alarm = new Audio('../sounds/alarm01.m4a');
 let minute;
 let second;
@@ -149,13 +150,10 @@ longbreak.addEventListener('click',e => {
 });
 
 sub_menu_icon.addEventListener('click', e =>{
-    var test = document.querySelector('.sub-menu-lists');
-    console.log(test.style.display);
-
-    if(test.style.display === "none" || test.style.display ===""){
-        test.style.display="block";
+    if(sub_menu_list.style.display === "none" || sub_menu_list.style.display ===""){
+        sub_menu_list.style.display="block";
     }else{
-        test.style.display ="none";
+        sub_menu_list.style.display ="none";
     }
 });
 
