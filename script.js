@@ -11,12 +11,26 @@ var save_btn=document.querySelector('.save');
 var cancel_btn= document.querySelector('.cancel');
 let sub_menu_icon = document.querySelector('.sub-menu-icon');
 var sub_menu_list = document.querySelector('.sub-menu-lists');
+
 let alarm = new Audio('../sounds/alarm01.m4a');
 let minute;
 let second;
 var intr; 
 var flag;
 
+
+function current_time() {
+    let chour = document.querySelector('.hour');
+    let cminute = document.querySelector('.minute');
+    let csecond = document.querySelector('.second');
+    
+    setInterval(() =>{
+        const date = new Date();
+        chour.innerText = date.getHours();
+        cminute.innerText = date.getMinutes();
+        csecond.innerText = date.getSeconds();
+    },1);
+};
 
 function shrtbreak(){
     timer_show.innerHTML = "05:00";
@@ -43,6 +57,9 @@ function btn_visiblity(){
     pause_btn.style.display="none";
     start_btn.disabled=false;
 }
+
+
+
 
 start_btn.addEventListener('click', e => {
     pause_btn.style.display="inline";
