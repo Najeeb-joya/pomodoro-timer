@@ -64,6 +64,15 @@ div.time-weather{
     top:60px;
     z-index: 1;
 }
+div.time{
+    border: 1px solid red;
+    width: 10%;
+    font-size: 2rem;
+    font-weight: 700;
+    padding-top: 3px;
+    padding-left: 1rem;
+    color: black;
+}
 
 div.timer{
     margin:50px auto;
