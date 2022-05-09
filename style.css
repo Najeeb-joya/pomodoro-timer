@@ -65,8 +65,7 @@ div.time-weather{
     z-index: 1;
 }
 div.time{
-    border: 1px solid red;
-    width: 13rem;
+    width: 14rem;
     font-size: 2rem;
     font-weight: 700;
     padding-top: 3px;
@@ -81,6 +80,8 @@ span.period{
 div.timer{
     margin:50px auto;
     margin-top: 200px;
+    min-width: 12rem;
+    border: 1px solid red;
     /* border: 1px blue solid; */
     text-align: center;
     background-color: rgb(122, 105, 142);
@@ -99,6 +100,7 @@ div.timer p{
 
 .timer-show{
     font-size: 80px;
+    font-size: 4rem;
     margin-top: 10px;
     margin-bottom: 40px;
 
@@ -126,6 +128,9 @@ div.timer p{
     margin-left: 10px ;
 }
 
+.sub-minue-task-preview{
+    min-width: 12rem;
+}
 .task-lable{
     font-weight: 600;
     font-size: 20px;
@@ -192,6 +197,9 @@ div.timer p{
     padding: 10px;
 }
 
+.addTask-taskInput{
+    min-width: 12rem;
+}
 
 div.addtask-container{
     margin-top: 30px;
