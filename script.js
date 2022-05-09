@@ -124,6 +124,7 @@ start_btn.addEventListener('click', e => {
         }
     }, 10);
 });
+
 pause_btn.addEventListener('click', e => {
     clearInterval(intr);
     pause_btn.disabled=true;
@@ -182,8 +183,27 @@ sub_menu_icon.addEventListener('click', e =>{
 
 
 addtask_btn.addEventListener('click', e => { // handle addtask button 
-    var task_inputs = document.querySelector('.task-inputs');  // access the task input div
-    var task_input = document.querySelector('.task-input');
+    let task_inputs = document.querySelector('.task-inputs');  // access the task input div
+    let task_input = document.querySelector('.task-input');
+
+    let inc_btn = document.querySelector('.inc-btn'); // access the pomodoro increment button
+    let dec_btn = document.querySelector('.dec-btn');  // access the pomodor decrement button
+    let pomo_counter= document.querySelector('.pomo-counter');
+    let pomocounter =1; 
+    
+    inc_btn.addEventListener('click', e =>{
+        console.log("Increment clicked");
+        pomocounter++; 
+        pomo_counter.textContent = pomocounter;
+    });
+    
+    dec_btn.addEventListener('click', e =>{
+        if(pomocounter > 1){
+            pomocounter--;
+        }
+        pomo_counter.textContent = pomocounter;
+    });
+
     task_inputs.style.display="block";
 
     cancel_btn.addEventListener('click', e => { // handle cancel button event which is inside task  input div 
