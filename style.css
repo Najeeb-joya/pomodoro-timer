@@ -142,10 +142,11 @@ div.timer p{
 }
 .sub-menu div{
     background-color: white;
+    border-radius: 2px;
 }
 .sub-menu img{
     cursor: pointer;
-    padding: 1px;
+    padding: 3px;
     box-sizing: border-box;
     
 }
@@ -154,9 +155,11 @@ div.timer p{
     text-align: center;
     display: none;
     
+    
 }
 .sub-menu-lists{
-    width: 50%;
+    width: 12rem;
+    min-width: 12rem;
     background-color: white;
     position: absolute;
     right: 0;
@@ -175,7 +178,7 @@ div.timer p{
     padding: 5px 0;
     padding-left: 30px;
     margin-left: -40px;
-    font-size: 15px;
+    font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
 
@@ -271,7 +274,6 @@ img{
     margin-top: 20px;
     padding: 5px;
     margin-right: 10px;
-    width: 60px;
     font-weight: 400;
     cursor: pointer;
 }
