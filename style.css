@@ -73,6 +73,10 @@ div.time{
     padding-left: 1rem;
     color: black;
 }
+span.period{
+    font-size: 0.8rem;
+    font-weight: 800;
+}
 
 div.timer{
     margin:50px auto;
