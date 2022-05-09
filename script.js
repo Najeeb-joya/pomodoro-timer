@@ -140,6 +140,7 @@ shortbreak.addEventListener('click', e => {
     clearInterval(intr)
     stop_btn.style.display="none";
     pause_btn.style.display="none";
+    start_btn.disabled=false;
 
 });
 longbreak.addEventListener('click',e => {
@@ -147,6 +148,7 @@ longbreak.addEventListener('click',e => {
     clearInterval(intr);
     stop_btn.style.display="none";
     pause_btn.style.display="none";
+    start_btn.disabled=false;
 });
 
 sub_menu_icon.addEventListener('click', e =>{
