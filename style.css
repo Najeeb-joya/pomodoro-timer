@@ -9,6 +9,19 @@ body{
     color: white;
    
 }
+
+button{
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    border-radius: 8px;
+    border: none;
+    padding: 10px 10px;
+    cursor: pointer;
+    margin-left: 10px ;
+    width: 6rem;
+
+}
 .container{
     width: 30%;
     margin: 0 auto;
@@ -105,27 +118,11 @@ div.timer p{
     margin-bottom: 40px;
 
 }
-.start-btn{
-    margin-bottom: 20px;
-    font-size: 20px;
-    font-weight: bolder;
-    border-radius: 8px;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-left: 10px ;
-}
+
+
 
 .stop-btn , .pause-btn{
-    margin-bottom: 20px;
-    font-size: 20px;
-    font-weight: bolder;
-    border-radius: 8px;
-    border: none;
-    padding: 10px 20px;
-    display: none;
-    cursor: pointer;
-    margin-left: 10px ;
+    display: none; 
 }
 
 .sub-minue-task-preview{
