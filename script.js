@@ -23,13 +23,17 @@ function current_time() {
     let chour = document.querySelector('.hour');
     let cminute = document.querySelector('.minute');
     let csecond = document.querySelector('.second');
+    let period = document.querySelector('.period');
     
     setInterval(() =>{
         const date = new Date();
-        chour.innerText = date.getHours();
-        cminute.innerText = date.getMinutes();
-        csecond.innerText = date.getSeconds();
-    },1);
+        if(date.getHours() > 12){
+            period.textContent = "PM";
+        }
+        chour.innerText = date.getHours() < 10? "0" + date.getHours() : date.getHours();
+        cminute.innerText = date.getMinutes() < 10? "0" + date.getMinutes(): date.getMinutes();
+        csecond.innerText = date.getSeconds() < 10 ? "0" + date.getSeconds():date.getSeconds();
+    },1000);
 };
 
 function shrtbreak(){
