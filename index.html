@@ -7,7 +7,7 @@
     <title>POMODORO TIMER</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="current_time()">
     <section class="nav-main-sec">
         <div class="brand">POMODARO</div>
         <nav class="main-nav">
@@ -23,11 +23,12 @@
             <span class="hour">12</span>:
             <span class="minute">00</span>:
             <span class="second">00</span>
+            <span class="period">AM</span>
         </div>
 
         <div class="weather"></div>
     </div>
-    
+
     <div class="container">
         <section class="main-timer">
             <div class="timer">
@@ -79,6 +80,7 @@
 
 
 
-    <script src="script.js"></script>
+    <script src="script.js">
+    </script>
 </body>
 </html>
