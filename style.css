@@ -23,7 +23,7 @@ button{
 
 }
 .container{
-    width: 30%;
+    width: 40%;
     margin: 0 auto;
     position: relative;
     
@@ -92,9 +92,8 @@ span.period{
 
 div.timer{
     margin:50px auto;
-    margin-top: 200px;
+    margin-top: 12rem;
     min-width: 12rem;
-    border: 1px solid red;
     /* border: 1px blue solid; */
     text-align: center;
     background-color: rgb(122, 105, 142);
@@ -174,10 +173,10 @@ div.timer p{
     
 }
 .sub-menu-list li{
-    margin: 5px 0;
-    padding: 5px 0;
-    padding-left: 30px;
-    margin-left: -40px;
+    margin: 0.4rem 0;
+    padding: 0.4rem 0;
+    padding-left: 1rem;
+    margin-left: -2.5rem;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
@@ -255,11 +254,10 @@ img{
   margin-right: 0;
 
 }
-.inc-dec-btn{
+.inc-btn, .dec-btn{
     padding: 5px;
     margin-left: 5px;
-    width: 30px
-    
+    width: 2vw;
 }
 .save-cancel{
     background-color: rgb(106, 117, 128);
