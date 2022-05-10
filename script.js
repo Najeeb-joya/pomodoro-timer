@@ -209,6 +209,8 @@ addtask_btn.addEventListener('click', e => { // handle addtask button
     cancel_btn.addEventListener('click', e => { // handle cancel button event which is inside task  input div 
         task_inputs.style.display="none"; 
         task_input.value="";
+        pomocounter=1;
+            pomo_counter.textContent = pomocounter;
         
     });
 
@@ -224,6 +226,8 @@ addtask_btn.addEventListener('click', e => { // handle addtask button
             task.setAttribute('class', 'task');
             task_preview.append(task);
             task_input.value="";   
+            pomocounter=1;
+            pomo_counter.textContent = pomocounter;
         }
     });
 });
