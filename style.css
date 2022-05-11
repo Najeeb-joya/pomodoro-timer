@@ -188,12 +188,21 @@ div.timer p{
 }
 
 .task{
-    margin-top: 20px;
+    margin-top: 1.3rem;
     border-radius: 8px;
     background-color: white;
     color: black;
-    font-size: 20px;
-    padding: 10px;
+    font-size: 1.3rem;
+    padding: 0.7rem;
+    
+}
+
+.pcounter{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    border: 1px solid red;
 }
 
 .addTask-taskInput{
