@@ -210,7 +210,7 @@ addtask_btn.addEventListener('click', e => { // handle addtask button
         task_inputs.style.display="none"; 
         task_input.value="";
         pomocounter=1;
-            pomo_counter.textContent = pomocounter;
+        pomo_counter.textContent = pomocounter;
         
     });
 
@@ -221,10 +221,14 @@ addtask_btn.addEventListener('click', e => { // handle addtask button
     save_btn.addEventListener('click', e => { // handle save button event which is inside task input div
         task_preview.style.display = "block";
         if(task_input.value !== ""){
-            var task = document.createElement('p');
+            let task = document.createElement('p');
+            let pcounter = document.createElement('span');
+            pcounter.textContent = pomocounter + "/0"; 
             task.textContent= task_input.value;
             task.setAttribute('class', 'task');
+            pcounter.setAttribute('class','pcounter');
             task_preview.append(task);
+            task.append(pcounter);
             task_input.value="";   
             pomocounter=1;
             pomo_counter.textContent = pomocounter;
