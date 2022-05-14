@@ -71,7 +71,7 @@ ul a{
 }
 div.time-weather{
     width: 100%;
-    background-color: rgb(130, 169, 167);
+    background-color: rgb(28, 237, 226);
     height: 40px;
     position: fixed;
     top:60px;
@@ -83,7 +83,9 @@ div.time{
     font-weight: 700;
     padding-top: 3px;
     padding-left: 1rem;
-    color: black;
+    margin-left: 1.6rem;
+    color: white;
+
 }
 span.period{
     font-size: 0.8rem;
@@ -115,6 +117,7 @@ div.timer p{
     font-size: 4rem;
     margin-top: 10px;
     margin-bottom: 40px;
+   
 
 }
 
@@ -199,10 +202,8 @@ div.timer p{
 
 .pcounter{
     display: flex;
-    flex-direction: column;
     justify-content: end;
     align-items: center;
-    border: 1px solid red;
 }
 
 .addTask-taskInput{
