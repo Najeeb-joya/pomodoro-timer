@@ -11,6 +11,7 @@ var save_btn=document.querySelector('.save');
 var cancel_btn= document.querySelector('.cancel');
 let sub_menu_icon = document.querySelector('.sub-menu-icon');
 var sub_menu_list = document.querySelector('.sub-menu-lists');
+let task = document.createElement('p');
 
 let alarm = new Audio('../sounds/alarm01.m4a');
 let minute;
@@ -179,6 +180,12 @@ sub_menu_icon.addEventListener('click', e =>{
     }else{
         sub_menu_list.style.display ="none";
     }
+    let clear_alltask = document.querySelector('.clear-all-tasks');
+    
+    clear_alltask.addEventListener('click',e =>{
+        task_preview.remove(task);
+        
+    });
 });
 
 
@@ -221,7 +228,7 @@ addtask_btn.addEventListener('click', e => { // handle addtask button
     save_btn.addEventListener('click', e => { // handle save button event which is inside task input div
         task_preview.style.display = "block";
         if(task_input.value !== ""){
-            let task = document.createElement('p');
+            
             let pcounter = document.createElement('span');
             pcounter.textContent = pomocounter + "/0"; 
             task.textContent= task_input.value;
