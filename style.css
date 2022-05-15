@@ -106,9 +106,10 @@ div.timer p{
     display: inline-block;
     padding: 10px;
     font-size: 20px;
+    margin-left: 1rem;
     background-color: rgb(59, 56, 56);
     cursor: pointer;
-    border-radius: 6px;
+    border-radius: 12px;
     font-weight: bold;
 }
 
@@ -120,9 +121,6 @@ div.timer p{
    
 
 }
-
-
-
 .stop-btn , .pause-btn{
     display: none; 
 }
