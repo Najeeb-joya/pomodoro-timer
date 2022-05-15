@@ -177,20 +177,25 @@ longbreak.addEventListener('click',e => {
 });
 
 sub_menu_icon.addEventListener('click', e =>{
+    console.log(sub_menu_list.style.display);
     if(sub_menu_list.style.display === "none" || sub_menu_list.style.display ===""){
         sub_menu_list.style.display="block";
     }else{
         sub_menu_list.style.display ="none";
     }
+
     let clear_alltask = document.querySelector('.clear-all-tasks');
     
     clear_alltask.addEventListener('click',e =>{
         task_preview.remove(task);
+        location.reload();
         task_inputs.style.display="none";
         sub_menu_list.style.display="none";
         
     });
+    console.log("Najeeb");
 });
+
 
 
 addtask_btn.addEventListener('click', e => { // handle addtask button 
@@ -232,7 +237,6 @@ addtask_btn.addEventListener('click', e => { // handle addtask button
     save_btn.addEventListener('click', e => { // handle save button event which is inside task input div
         task_preview.style.display = "block";
         if(task_input.value !== ""){
-
             task = document.createElement('p');
             let pcounter = document.createElement('span');
             pcounter.textContent = pomocounter + "/0"; 
