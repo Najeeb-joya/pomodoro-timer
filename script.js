@@ -11,7 +11,9 @@ var save_btn=document.querySelector('.save');
 var cancel_btn= document.querySelector('.cancel');
 let sub_menu_icon = document.querySelector('.sub-menu-icon');
 var sub_menu_list = document.querySelector('.sub-menu-lists');
-let task = document.createElement('p');
+let task; 
+let task_inputs;
+
 
 let alarm = new Audio('../sounds/alarm01.m4a');
 let minute;
@@ -184,13 +186,15 @@ sub_menu_icon.addEventListener('click', e =>{
     
     clear_alltask.addEventListener('click',e =>{
         task_preview.remove(task);
+        task_inputs.style.display="none";
+        sub_menu_list.style.display="none";
         
     });
 });
 
 
 addtask_btn.addEventListener('click', e => { // handle addtask button 
-    let task_inputs = document.querySelector('.task-inputs');  // access the task input div
+    task_inputs = document.querySelector('.task-inputs');  // access the task input div
     let task_input = document.querySelector('.task-input');
 
     let inc_btn = document.querySelector('.inc-btn'); // access the pomodoro increment button
@@ -228,7 +232,8 @@ addtask_btn.addEventListener('click', e => { // handle addtask button
     save_btn.addEventListener('click', e => { // handle save button event which is inside task input div
         task_preview.style.display = "block";
         if(task_input.value !== ""){
-            
+
+            task = document.createElement('p');
             let pcounter = document.createElement('span');
             pcounter.textContent = pomocounter + "/0"; 
             task.textContent= task_input.value;
